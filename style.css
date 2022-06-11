@@ -687,6 +687,15 @@ body {
     margin-bottom: 0;
 }
 
+.footer__contact--apps {
+    flex-flow: wrap;
+    gap: 8px;
+}
+
+.footer__contact--apps dt {
+    width: 100%;
+}
+
 .footer__contact dt {
     margin: 0;
     padding: 0;
@@ -953,4 +962,9 @@ body {
 .select-city__city-children {
     font: 400 14px "Rubik", "Tahoma", sans-serif;
     color: #bbb;
+}
+
+.app-link-image {
+    width: 120px;
+    height: 37px;
 }

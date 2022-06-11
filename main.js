@@ -187,7 +187,6 @@ const updateActionTitles = () => {
       : `https://krasnodar.dimpoisk.ru/catalog/1000/add.html`;
 
   chartLink.href = chartLinkHref;
-  console.log(chartLink);
 };
 
 updateActionTitles();
