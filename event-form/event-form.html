@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Добавление акции или скидки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="event-form.css">
+</head>
+<body>
+
+<section class="event-form">
+    <div class="container">
+        <h1>Добавление акции или скидки</h1>
+
+        <form id="event-form" method="POST" action="https://httpbin.org/post">
+            <div class="event-form__field">
+                <label class="event-form__label">Город-участник акции/скидки</label>
+                <div class="event-form__select">
+                    <select name="city" required>
+                        <option value="Краснодар">Краснодар</option>
+                        <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                        <option value="Владикавказ">Владикавказ</option>
+                        <option value="Грозный">Грозный</option>
+                        <option value="Махачкала">Махачкала</option>
+                        <option value="Каспийск">Каспийск</option>
+                    </select>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L8 10L12 6" fill="#666666"/>
+                    </svg>
+                </div>
+            </div>
+
+            <label class="event-form__field">
+                <span class="event-form__label">Название фирмы и её адрес</span>
+                <textarea rows="1" name="firm" placeholder="Кафе Манчестер, ул. Ленина 33" required></textarea>
+            </label>
+
+            <label class="event-form__field">
+                <span class="event-form__label">Скидка или акция</span>
+                <textarea rows="1" name="event-title" placeholder="Скидка -40% на торты" required></textarea>
+            </label>
+
+            <label class="event-form__field">
+                <span class="event-form__label">Срок действия акции/скидки</span>
+                <input type="text" name="event-period" placeholder="с 15 по 28 мая" required>
+            </label>
+
+            <label class="event-form__field">
+                <span class="event-form__label">Телефон или адрес эл. почты для связи</span>
+                <input type="text" name="phone-email" placeholder="Как нам с вами связаться?" required>
+            </label>
+
+            <label class="event-form__checkbox">
+                <input type="checkbox" name="policy-accepted" required>
+                <span>Ввод данных подтверждает ваше согласие с политикой конфиденциальности и обработкой персональных данных</span>
+            </label>
+
+            <div class="event-form__simple-captcha">
+                <div id="captcha" class="simpleCaptcha"></div>
+
+                <link rel="stylesheet" href="https://makhachkala.dimpoisk.ru/plugins/p_simplecaptcha/jquerysimplecaptcha/jquery.simpleCaptcha.css">
+                <script src="https://makhachkala.dimpoisk.ru/includes/jquery/jquery.js"></script>
+                <script src="https://makhachkala.dimpoisk.ru/plugins/p_simplecaptcha/jquerysimplecaptcha/jquery.simpleCaptcha.js"></script>
+
+                <script>
+                  const path = `https://makhachkala.dimpoisk.ru/plugins/p_simplecaptcha/jquerysimplecaptcha/`;
+                  $(`#captcha`).simpleCaptcha({
+                    scriptPath: path + 'simpleCaptcha.php',
+                    introText: 'Для безопасности выберите картинку с изображением: <strong class="captchaText"></strong>&nbsp;&nbsp;&nbsp;',
+                    refreshButton: '<img src="' + path + 'refresh_btn.png" style="top: 0;" class="refreshButton event-form__captcha-refresh" alt="Обновить"  />'
+                  });
+                </script>
+            </div>
+
+            <div class="event-form__submit">
+                <button type="submit">Опубликовать</button>
+                <button type="reset">Отменить</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Служба поддержки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="feedback-form.css">
+</head>
+<body>
+
+<section class="feedback-form">
+    <div class="container">
+        <h1>Служба поддержки</h1>
+
+        <div class="feedback-form__inner">
+            <form method="POST" action="https://httpbin.org/post">
+                <h2>Напишите нам</h2>
+
+                <label class="feedback-form__field">
+                    <span class="feedback-form__label">Имя</span>
+                    <input type="text" name="name" placeholder="Как к вам обращаться?">
+                </label>
+
+                <label class="feedback-form__field">
+                    <span class="feedback-form__label">Адрес эл. почты</span>
+                    <input type="text" name="email" placeholder="Укажите для обратной связи">
+                </label>
+
+                <label class="feedback-form__field feedback-form__field--last">
+                    <span class="feedback-form__label">Ваше сообщение</span>
+                    <textarea type="text" name="message"></textarea>
+                </label>
+
+                <div class="feedback-form__submit">
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+
+            <dl class="feedback-form__contacts">
+                <h2>Свяжитесь с нами</h2>
+
+                <dt>Телефон</dt>
+                <dd>
+                    <a href="tel:+78006006042">8 (800) 600 60 42</a>
+                </dd>
+
+                <dt>Адрес эл. почты</dt>
+                <dd>
+                    <a href="mailto:dimpoisk.ru@yandex.ru">dimpoisk.ru@yandex.ru</a>
+                </dd>
+
+                <dt>Whatsapp</dt>
+                <dd>
+                    <a>8 (903) 412 55 15</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

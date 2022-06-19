@@ -1,0 +1,236 @@
+.sr-only {
+    position: absolute;
+    z-index: -9999;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    overflow: hidden;
+    border: none
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+@media (max-width: 1150px) {
+    .container {
+        width: 320px;
+        padding: 0
+    }
+}
+
+.modal-owner {
+    overflow: hidden
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+.root {
+    width: 100%
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font: 400 14px Rubik, Tahoma, sans-serif;
+    color: #444;
+    background-color: #f9f9f9
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    z-index: 11;
+    pointer-events: none;
+    display: flex;
+    filter: grayscale(50%);
+    opacity: .5
+}
+
+@media (max-width: 1150px) {
+    .desktop {
+        display: none
+    }
+}
+
+.mobile {
+    display: none
+}
+
+@media (max-width: 1150px) {
+    .mobile {
+        display: flex
+    }
+}
+
+.event-form {
+    display: flex;
+    width: 100%;
+    padding: 200px 0
+}
+
+@media (max-width: 1150px) {
+    .event-form {
+        padding: 135px 0
+    }
+}
+
+.event-form h1 {
+    display: flex;
+    margin: 0 0 30px;
+    padding: 0;
+    font: 700 24px/28px Rubik, Tahoma, sans-serif
+}
+
+@media (max-width: 1150px) {
+    .event-form h1 {
+        position: absolute;
+        z-index: -9999;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+        overflow: hidden;
+        border: none
+    }
+}
+
+.event-added {
+    padding: 110px 110px 141px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff
+}
+
+@media (max-width: 1150px) {
+    .event-added {
+        padding: 0 20px;
+        background-color: transparent
+    }
+}
+
+.event-added__icon {
+    margin-bottom: 24px;
+    display: flex;
+    width: 100px;
+    height: 100px
+}
+
+@media (max-width: 1150px) {
+    .event-added__icon {
+        margin-bottom: 8px;
+        width: 64px;
+        height: 64px
+    }
+}
+
+.event-added__title {
+    display: flex;
+    margin-bottom: 25px;
+    font: 700 24px Rubik, Tahoma, sans-serif
+}
+
+@media (max-width: 1150px) {
+    .event-added__title {
+        margin-bottom: 12px;
+        font: 500 18px/21px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-added__description {
+    margin: 0;
+    text-align: center;
+    font: 400 14px/22px Rubik, Tahoma, sans-serif;
+    color: #666
+}
+
+.event-added__description:last-of-type {
+    margin-bottom: 40px
+}
+
+@media (max-width: 1150px) {
+    .event-added__description:last-of-type {
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 1150px) {
+    .event-added__description {
+        margin-bottom: 10px;
+        font: 400 13px/18px Rubik, Tahoma, sans-serif
+    }
+
+    .event-added__description br {
+        display: none
+    }
+}
+
+.event-added__description a {
+    font: 500 14px/22px Rubik, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #3e75de
+}
+
+.event-added__description a:hover {
+    text-decoration: underline
+}
+
+.event-added__description a:active {
+    opacity: .8
+}
+
+@media (max-width: 1150px) {
+    .event-added__description a {
+        font: 600 13px/18px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-added__return a {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 18px/21px Rubik, Tahoma, sans-serif;
+    text-decoration: none;
+    background-color: #f2394d;
+    color: #fff
+}
+
+.event-added__return a:hover {
+    text-decoration: underline;
+    background-color: #e90f27
+}
+
+.event-added__return a:active {
+    opacity: .8
+}
+
+@media (max-width: 1150px) {
+    .event-added__return a {
+        padding: 12px 46px;
+        font: 400 14px Rubik, Tahoma, sans-serif
+    }
+}

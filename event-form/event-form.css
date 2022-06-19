@@ -1,0 +1,346 @@
+.sr-only {
+    position: absolute;
+    z-index: -9999;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    overflow: hidden;
+    border: none
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+@media (max-width: 1150px) {
+    .container {
+        width: 320px;
+        padding: 0
+    }
+}
+
+.modal-owner {
+    overflow: hidden
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+.root {
+    width: 100%
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font: 400 14px Rubik, Tahoma, sans-serif;
+    color: #444;
+    background-color: #f9f9f9
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    z-index: 11;
+    pointer-events: none;
+    display: flex;
+    filter: grayscale(50%);
+    opacity: .5
+}
+
+@media (max-width: 1150px) {
+    .desktop {
+        display: none
+    }
+}
+
+.mobile {
+    display: none
+}
+
+@media (max-width: 1150px) {
+    .mobile {
+        display: flex
+    }
+}
+
+.event-form {
+    display: flex;
+    width: 100%;
+    padding: 200px 0
+}
+
+@media (max-width: 1150px) {
+    .event-form {
+        padding: 150px 0
+    }
+}
+
+.event-form h1 {
+    display: flex;
+    margin: 0 0 30px;
+    padding: 0;
+    font: 700 24px/28px Rubik, Tahoma, sans-serif
+}
+
+@media (max-width: 1150px) {
+    .event-form h1 {
+        padding: 0 20px;
+        margin-bottom: 20px;
+        font: 500 18px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-form form {
+    padding: 62px 60px;
+    display: flex;
+    flex-flow: column;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #333
+}
+
+@media (max-width: 1150px) {
+    .event-form form {
+        padding: 32px 20px 34px
+    }
+}
+
+.event-form [type=text] {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 3px
+}
+
+.event-form [type=text]:hover {
+    border-color: #bbb
+}
+
+.event-form [type=text]::placeholder {
+    color: #bbb
+}
+
+@media (max-width: 1150px) {
+    .event-form [type=text] {
+        font: 400 16px/19px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-form textarea {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    resize: none;
+    border: 1px solid #dedede;
+    border-radius: 3px
+}
+
+.event-form textarea:hover {
+    border-color: #bbb
+}
+
+.event-form textarea::placeholder {
+    color: #bbb
+}
+
+@media (max-width: 1150px) {
+    .event-form textarea {
+        height: 96px;
+        font: 400 16px/19px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-form select {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    appearance: none
+}
+
+.event-form select:hover {
+    border-color: #bbb
+}
+
+.event-form__field {
+    margin-bottom: 48px;
+    display: flex;
+    flex-flow: column
+}
+
+@media (max-width: 1150px) {
+    .event-form__field {
+        margin-bottom: 30px
+    }
+}
+
+.event-form__label {
+    display: flex;
+    margin-bottom: 8px
+}
+
+.event-form__select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%
+}
+
+.event-form__select:hover path, .event-form__select:focus path {
+    fill: #333
+}
+
+.event-form__select svg {
+    position: absolute;
+    right: 16px;
+    pointer-events: none
+}
+
+.event-form__select select {
+    cursor: pointer
+}
+
+@media (max-width: 1150px) {
+    .event-form__select select {
+        font: 400 16px/19px Rubik, Tahoma, sans-serif
+    }
+}
+
+@media (max-width: 1150px) {
+    .event-form__select {
+        width: 100%
+    }
+}
+
+.event-form__checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    cursor: pointer
+}
+
+@media (max-width: 1150px) {
+    .event-form__checkbox {
+        align-items: flex-start;
+        margin-bottom: 22px;
+        font: 400 12px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-form__checkbox [type=checkbox] {
+    margin-right: 8px;
+    cursor: inherit;
+    transform: scale(1.2)
+}
+
+.event-form__simple-captcha {
+    position: relative;
+    margin-bottom: 48px;
+    display: flex
+}
+
+@media (max-width: 1150px) {
+    .event-form__simple-captcha {
+        font: 400 12px Rubik, Tahoma, sans-serif
+    }
+}
+
+@media (max-width: 1150px) {
+    .event-form__simple-captcha .refreshButton.event-form__captcha-refresh {
+        position: absolute;
+        top: 10px !important;
+        right: 0
+    }
+}
+
+.event-form__submit {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end
+}
+
+@media (max-width: 1150px) {
+    .event-form__submit {
+        align-items: stretch
+    }
+}
+
+.event-form__submit [type=submit] {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 18px/21px Rubik, Tahoma, sans-serif;
+    color: #fff;
+    background-color: #8bce48;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.event-form__submit [type=submit]:hover {
+    background-color: #72b330
+}
+
+.event-form__submit [type=submit]:active {
+    opacity: .8
+}
+
+@media (max-width: 1150px) {
+    .event-form__submit [type=submit] {
+        font: 400 16px Rubik, Tahoma, sans-serif
+    }
+}
+
+.event-form__submit [type=reset] {
+    margin-top: 16px;
+    padding: 15px 24px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font: 500 18px/21px Rubik, Tahoma, sans-serif;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.event-form__submit [type=reset]:hover {
+    color: #fff;
+    background-color: #999;
+    color-color: #fff
+}
+
+.event-form__submit [type=reset]:active {
+    opacity: .8
+}
+
+@media (max-width: 1150px) {
+    .event-form__submit [type=reset] {
+        display: flex;
+        font: 400 16px Rubik, Tahoma, sans-serif
+    }
+}
