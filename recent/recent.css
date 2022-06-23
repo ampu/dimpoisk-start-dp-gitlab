@@ -85,7 +85,7 @@ body:before {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 64px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .recent__title {
@@ -105,7 +105,28 @@ body:before {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex
+    display: flex;
+}
+
+@media (max-width: 1150px) {
+    .recent__list {
+        display: block;
+    }
+}
+
+.recent__list .flickity-viewport {
+    overflow: visible;
+}
+
+.recent__list::after {
+    content: '';
+}
+
+@media (max-width: 1150px) {
+    .recent__list::after {
+        content: 'flickity';
+        display: none;
+    }
 }
 
 .recent__item {
@@ -123,6 +144,10 @@ body:before {
 @media (max-width: 1150px) {
     .recent__item {
         width: 250px
+    }
+
+    .recent__item:last-of-type {
+        margin-right: 16px;
     }
 }
 
