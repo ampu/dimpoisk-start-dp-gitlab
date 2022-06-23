@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Добавление акции или скидки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.min.css">
+    <link rel="stylesheet" href="recent.css">
+</head>
+<body>
+
+<section class="recent">
+    <div class="container">
+        <h2 class="recent__title">Новое на DimPoisk</h2>
+
+        <div class="swiper">
+            <ul class="recent__list swiper-wrapper">
+                <li class="recent__item swiper-slide">
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">
+                        <img class="recent__image" src="img/1.jpg" alt="Заголовок" width="272" height="200">
+                    </a>
+                    <p class="recent__text desktop">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому человеку прокладывать маршруты, находить нужные места. Так же можно применять филь...
+                    </p>
+                    <p class="recent__text mobile">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому че...
+                    </p>
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">Читать дальше...</a>
+                </li>
+
+                <li class="recent__item swiper-slide">
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">
+                        <img class="recent__image" src="img/2.jpg" alt="Заголовок" width="264" height="200">
+                    </a>
+                    <p class="recent__text desktop">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому человеку прокладывать маршруты, находить нужные места. Так же можно применять филь...
+                    </p>
+                    <p class="recent__text mobile">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому че...
+                    </p>
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">Читать дальше...</a>
+                </li>
+
+                <li class="recent__item swiper-slide">
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">
+                        <img class="recent__image" src="img/3.jpg" alt="Заголовок" width="262" height="200">
+                    </a>
+                    <p class="recent__text desktop">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому человеку прокладывать маршруты, находить нужные места. Так же можно применять филь...
+                    </p>
+                    <p class="recent__text mobile">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому че...
+                    </p>
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">Читать дальше...</a>
+                </li>
+
+                <li class="recent__item swiper-slide">
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">
+                        <img class="recent__image" src="img/4.jpg" alt="Заголовок" width="264" height="200">
+                    </a>
+                    <p class="recent__text desktop">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому человеку прокладывать маршруты, находить нужные места. Так же можно применять филь...
+                    </p>
+                    <p class="recent__text mobile">
+                        На ДимПоиске добавлены новые функции по геолокации, которые помогут кажому че...
+                    </p>
+                    <a class="recent__link" href="https://makhachkala.dimpoisk.ru/catalog/item269044_lenta.html#lenta_item_6238">Читать дальше...</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script src="swiper-bundle.min.js"></script>
+<script>
+  const doEllipsis = (text, length) => {
+    const chars = Array.from(text);
+    if (chars.length <= length) {
+      return text;
+    }
+    return chars.slice(0, length - 3).join(``) + `...`;
+  };
+
+  /** @enum {number} */
+  const Viewport = {
+    MOBILE: 1150,
+  };
+
+  const calculateIsMobile = () => {
+    return window.innerWidth <= Viewport.MOBILE;
+  };
+
+  const addViewportListener = (onChange, shouldInit = false) => {
+    let isMobile = calculateIsMobile();
+    if (shouldInit) {
+      onChange(isMobile);
+    }
+    const onWindowResize = () => {
+      const newIsMobile = calculateIsMobile();
+      if (newIsMobile !== isMobile) {
+        isMobile = newIsMobile;
+        onChange(isMobile);
+      }
+    };
+    window.addEventListener(`resize`, onWindowResize);
+    return () => {
+      window.removeEventListener(`resize`, onWindowResize);
+    };
+  };
+
+  let swiper = null;
+  addViewportListener((isMobile) => {
+    if (isMobile) {
+      swiper = new Swiper(`.swiper`, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        width: 250,
+        loop: true,
+        loopedSlides: 4,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+      return;
+    }
+    if (swiper) {
+      swiper.destroy();
+      swiper = null;
+    }
+  }, true);
+</script>
+</body>
+</html>
