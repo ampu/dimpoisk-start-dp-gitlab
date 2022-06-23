@@ -45,23 +45,13 @@ html {
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
     font: 400 14px Rubik, Tahoma, sans-serif;
     color: #444;
     background-color: #f9f9f9
-}
-
-body:before {
-    content: "";
-    position: absolute;
-    z-index: 11;
-    pointer-events: none;
-    display: flex;
-    filter: grayscale(50%);
-    opacity: .5
 }
 
 @media (max-width: 1150px) {
@@ -85,7 +75,7 @@ body:before {
     width: 100%;
     margin-top: 50px;
     margin-bottom: 64px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .recent__title {
@@ -97,7 +87,8 @@ body:before {
 
 @media (max-width: 1150px) {
     .recent__title {
-        margin: 0 auto
+        margin: 0 auto;
+        margin-bottom: 16px;
     }
 }
 
@@ -106,12 +97,6 @@ body:before {
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-@media (max-width: 1150px) {
-    .recent__list {
-        display: block;
-    }
 }
 
 .recent__list .flickity-viewport {
@@ -134,7 +119,11 @@ body:before {
     margin-right: 16px;
     display: flex;
     flex-flow: column;
-    align-items: center
+    align-items: center;
+
+    background-color: #fff;
+    border: 1px solid #F1F1F1;
+    border-radius: 3px;
 }
 
 .recent__item:last-of-type {
@@ -173,15 +162,19 @@ body:before {
 
 @media (max-width: 1150px) {
     .recent__text {
+        padding: 16px 16px 0;
         font: 300 14px/16px Rubik, Tahoma, sans-serif
     }
 }
 
 .recent__link {
+    align-self: stretch;
     display: flex;
-    padding: 10px;
-    font: 400 14px/40px Rubik, Tahoma, sans-serif;
+    justify-content: center;
+    font: 400 14px/45px Rubik, Tahoma, sans-serif;
+
     text-decoration: none;
+
     color: #1e85c7
 }
 
@@ -193,8 +186,17 @@ body:before {
     opacity: .8
 }
 
+.recent__link--with-padding {
+    padding: 0 10px;
+}
+
 @media (max-width: 1150px) {
     .recent__link {
-        margin-right: auto
+        margin-right: auto;
+        line-height: 56px;
+    }
+
+    .recent__link--with-padding {
+        padding: 0 16px;
     }
 }
