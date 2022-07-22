@@ -1,0 +1,845 @@
+.sr-only {
+    position: absolute;
+    z-index: -9999;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1150px) {
+    .container {
+        width: 320px;
+        padding: 0 20px;
+    }
+}
+
+.modal-owner {
+    overflow: hidden;
+}
+
+html,
+body,
+#app {
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font: 400 14px "Rubik", "Tahoma", sans-serif;
+    color: #444;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 1150px) {
+    .desktop {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 1150px) {
+    .mobile {
+        display: unset;
+    }
+}
+
+.firm-form {
+    display: flex;
+    width: 100%;
+    padding: 200px 0;
+}
+
+@media (max-width: 1150px) {
+    .firm-form {
+        padding: 155px 0;
+    }
+}
+
+.firm-form h1 {
+    display: flex;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font: 700 24px/28px "Rubik", "Tahoma", sans-serif;
+}
+
+@media (max-width: 1150px) {
+    .firm-form h1 {
+        margin-bottom: 20px;
+        font: 500 18px "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+.firm-form form {
+    margin: 0 15px;
+    padding: 40px 46px;
+    display: flex;
+    flex-flow: column;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #333;
+}
+
+@media (max-width: 1150px) {
+    .firm-form form {
+        padding: 0 20px;
+        margin: 0 -20px;
+        padding-top: 36px;
+        padding-bottom: 34px;
+    }
+}
+
+.firm-form [type=text],
+.firm-form [type=tel],
+.firm-form [type=email] {
+    padding: 13px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+}
+
+.firm-form [type=text]:hover,
+.firm-form [type=tel]:hover,
+.firm-form [type=email]:hover {
+    border-color: #bbb;
+}
+
+.firm-form [type=text]::placeholder,
+.firm-form [type=tel]::placeholder,
+.firm-form [type=email]::placeholder {
+    color: #bbb;
+}
+
+@media (max-width: 1150px) {
+    .firm-form [type=text],
+    .firm-form [type=tel],
+    .firm-form [type=email] {
+        font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+.firm-form textarea {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    resize: none;
+    font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+}
+
+.firm-form textarea:hover {
+    border-color: #bbb;
+}
+
+.firm-form textarea::placeholder {
+    color: #bbb;
+}
+
+@media (max-width: 1150px) {
+    .firm-form textarea {
+        font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+.firm-form select {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.firm-form select:invalid {
+    color: #bbb;
+}
+
+.firm-form select:hover {
+    border-color: #bbb;
+}
+
+.firm-form__contacts {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.firm-form__field {
+    margin-bottom: 39px;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__field {
+        margin-bottom: 25px;
+    }
+}
+
+.firm-form__field.small {
+    width: 400px;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__field.small {
+        width: 100%;
+    }
+}
+
+.firm-form__field.medium {
+    width: 560px;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__field.medium {
+        width: 100%;
+    }
+}
+
+.firm-form__field .firm-form__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.firm-form__field .firm-form__search input {
+    padding-left: 48px;
+}
+
+.firm-form__field .firm-form__search input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.firm-form__field .firm-form__search svg {
+    position: absolute;
+    left: 15px;
+    pointer-events: none;
+}
+
+.firm-form__field .firm-form__file {
+    position: relative;
+    padding: 47px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    background: #edf8ff;
+    border: 2px dashed #d1e3ef;
+    border-radius: 3px;
+}
+
+.firm-form__field .firm-form__file.active::after {
+    content: "+";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font: 500 96px "Rubik", "Tahoma", sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__field .firm-form__file.active::after {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .firm-form__field .firm-form__file {
+        align-self: flex-start;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+}
+
+.firm-form__field .firm-form__file svg {
+    margin-bottom: 17px;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__field .firm-form__file svg {
+        display: none;
+    }
+}
+
+.firm-form__file-description {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: #999999;
+}
+
+.firm-form__file-description strong {
+    display: flex;
+    margin-bottom: 10px;
+    font: 500 14px/17px "Rubik", "Tahoma", sans-serif;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__file-description strong {
+        display: none;
+    }
+}
+
+.firm-form__file-description span {
+    display: flex;
+    margin-bottom: 15px;
+    font: 400 12px/14px "Rubik", "Tahoma", sans-serif;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__file-description span {
+        display: none;
+    }
+}
+
+.firm-form__file-description label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    font: 500 14px/17px "Rubik", "Tahoma", sans-serif;
+    color: #fff;
+    background: #1e85c7;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.firm-form__file-description label:hover {
+    background-color: #1b76b1;
+}
+
+.firm-form__file-description label:active {
+    opacity: 0.8;
+}
+
+.firm-form__file-description input {
+    position: absolute;
+    z-index: -9999;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+}
+
+.firm-form__file-description input:focus + label {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #1e85c7;
+}
+
+.firm-form__file-list {
+    align-self: stretch;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+    text-align: left;
+}
+
+.firm-form__label {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+    display: flex;
+    font: 400 14px/normal "Rubik", "Tahoma", sans-serif;
+}
+
+.firm-form__label--image {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__label--image {
+        margin-bottom: 16px;
+        font: 500 16px/normal "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+.firm-form__label--tags {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__label--tags span {
+        color: #aaa;
+    }
+}
+
+.firm-form__select {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.firm-form__select:hover path, .firm-form__select:focus path {
+    fill: #333;
+}
+
+.firm-form__select svg {
+    position: absolute;
+    right: 16px;
+    pointer-events: none;
+}
+
+.firm-form__select select {
+    cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__select select {
+        font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+@media (max-width: 1150px) {
+    .firm-form__select {
+        width: 100%;
+    }
+}
+
+.firm-form__checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__checkbox {
+        margin-bottom: 22px;
+        font: 400 12px "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+.firm-form__checkbox [type=checkbox] {
+    margin-right: 8px;
+    accent-color: #f2394d;
+    cursor: inherit;
+    transform: scale(1.2);
+}
+
+@media (max-width: 1150px) {
+    .firm-form__checkbox [type=checkbox] {
+        transform-origin: left center;
+        transform: scale(2);
+    }
+}
+
+.firm-form__checkbox label {
+    font: 400 14px/normal "Rubik", "Tahoma", sans-serif;
+    cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__checkbox label {
+        margin-left: 12px;
+    }
+}
+
+.firm-form__checkbox b {
+    font-weight: normal;
+    text-decoration: underline;
+    color: inherit;
+}
+
+.firm-form__submit {
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: flex-end;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__submit {
+        flex-flow: column;
+        align-items: stretch;
+    }
+}
+
+.firm-form__submit button {
+    margin-left: 15px;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__submit button {
+        margin: 0;
+        margin-bottom: 16px;
+    }
+}
+
+.firm-form__submit [type=submit] {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 18px/21px "Rubik", "Tahoma", sans-serif;
+    color: #fff;
+    background-color: #8bce48;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.firm-form__submit [type=submit]:hover {
+    background-color: #72b330;
+}
+
+.firm-form__submit [type=submit]:active {
+    opacity: 0.8;
+}
+
+.firm-form__submit [type=submit]:disabled {
+    background-color: #8bce48;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    cursor: default;
+}
+
+.firm-form__submit [type=reset] {
+    padding: 15px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 500 18px/21px "Rubik", "Tahoma", sans-serif;
+    color: #999;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.firm-form__submit [type=reset]:hover {
+    color: #fff;
+    background-color: #999;
+}
+
+.firm-form__submit [type=reset]:active {
+    opacity: 0.8;
+}
+
+.firm-form__add-address {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    font: 500 14px/normal "Rubik", "Tahoma", sans-serif;
+    background-color: #1e85c7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.firm-form__add-address:hover {
+    background-color: #1b76b1;
+}
+
+.firm-form__add-address:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #1e85c7;
+}
+
+.firm-form__add-address:active {
+    opacity: 0.8;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__address {
+        height: 96px;
+    }
+}
+
+.firm-form__tags {
+    height: 144px;
+}
+
+.firm-form__description {
+    height: 192px;
+}
+
+.firm-form__contacts-extra:not(.active) {
+    display: none;
+}
+
+.firm-form__contacts-extra-title {
+    margin: 0;
+    margin-bottom: 45px;
+    padding: 0;
+    font: 500 18px/normal "Rubik", "Tahoma", sans-serif;
+    color: #333;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__contacts-extra-title {
+        margin-bottom: 20px;
+        font: 500 16px/normal "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+.firm-form__contacts-extra-title span {
+    color: #bbb;
+}
+
+.firm-form__captcha {
+    position: relative;
+    min-height: 90px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+@media (max-width: 1150px) {
+    .firm-form__captcha {
+        min-height: 99px;
+        margin-bottom: 24px;
+        font: 400 12px "Rubik", "Tahoma", sans-serif;
+    }
+}
+
+@media (max-width: 1150px) {
+    .firm-form__captcha .refreshButton.firm-form__captcha-refresh {
+        position: absolute;
+        top: 10px !important;
+        right: 0;
+    }
+}
+
+@keyframes bounce-in {
+    from {
+        transform: scale3d(0, 0, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes complete {
+    from {
+        background-color: transparent;
+    }
+    20% {
+        background-color: rgba(144, 238, 144, 0.1);
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes animate-progress-bar {
+    from {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 50%;
+        left: 25%;
+    }
+    to {
+        width: 0;
+        left: 100%;
+    }
+}
+
+.firm-form-file {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 48px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+@media (max-width: 1150px) {
+    .firm-form-file {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+.firm-form-file[data-state=pending] {
+    overflow-x: hidden;
+}
+
+.firm-form-file[data-state=pending]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ffd749;
+    transform-origin: left center;
+    transform: scaleX(calc(100% * var(--progress)));
+}
+
+.firm-form-file[data-state=error] {
+    animation: shake 0.6s;
+}
+
+.firm-form-file[data-state=ok] {
+    animation: complete 1s;
+}
+
+.firm-form-file__state {
+    position: absolute;
+    left: 0;
+}
+
+.firm-form-file__state[data-state=pending] {
+    color: rgba(255, 203, 70, 0.3);
+}
+
+.firm-form-file__state[data-state=ok] {
+    color: rgb(30, 133, 199);
+}
+
+.firm-form-file__state[data-state=error] {
+    color: rgba(255, 57, 77, 0.3);
+}
+
+.firm-form-file__name {
+    display: flex;
+    margin-top: 4px;
+    font: 500 14px/17px "Rubik", "Tahoma", sans-serif;
+    color: #333;
+}
+
+.firm-form-file__size {
+    display: flex;
+    margin-top: 4px;
+    font: 400 12px/14px "Rubik", "Tahoma", sans-serif;
+    color: #999;
+}
+
+.firm-form-file__actions {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    display: flex;
+}
+
+.firm-form-file__actions button {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+.firm-form-file__actions button:hover {
+    color: #999;
+}
+
+.firm-form-file__actions button:active {
+    opacity: 0.8;
+}
+
+.firm-form-file__actions svg {
+    width: 16px;
+    height: 16px;
+}
+
+.firm-form-file__actions .firm-form-file__action {
+    margin-left: 16px;
+}
+
+.firm-form-file__actions .firm-form-file__action:not(.active) {
+    display: none;
+}
+
+.firm-form-file__actions .firm-form-file__action--none {
+    animation: bounce-in 0.3s cubic-bezier(0.6, -0.25, 0.34, 5) both;
+}
+
+.firm-form-map {
+    display: flex;
+    height: 400px;
+    background-color: #e8e8e8;
+}
+
+@media (max-width: 1150px) {
+    .firm-form-map {
+        height: 240px;
+    }
+}
+
+.map-pin {
+    position: relative;
+}
+
+.map-pin svg {
+    position: absolute;
+    left: -32px;
+    top: -64px;
+    width: 64px;
+    height: 64px;
+}

@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Добавление акции или скидки</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://makhachkala.dimpoisk.ru/plugins/p_simplecaptcha/jquerysimplecaptcha/jquery.simpleCaptcha.css">
+    <link rel="stylesheet" href="./normalize.min.css">
+    <link rel="stylesheet" href="./firm-form.css">
+</head>
+<body>
+
+<section class="firm-form">
+    <div class="container">
+        <h1>Добавление фирмы в каталог</h1>
+
+        <form id="firm-form" method="POST" action="https://httpbin.org/post" enctype="multipart/form-data">
+            <div class="firm-form__field">
+                <label class="firm-form__label" for="firm-form-type">Категория фирмы</label>
+                <div class="firm-form__search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#BBBBBB" stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        <path d="M20.9984 21L16.6484 16.65" stroke="#BBBBBB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input id="firm-form-type" type="text" name="new_cat" placeholder="Не знаю, укажите сами" list="firm-form-types">
+                    <datalist id="firm-form-types">
+                        <option value="Администрация, власти"/>
+                        <option value="Деловая сфера услуг"/>
+                        <option value="Дизайн"/>
+                        <option value="Животные"/>
+                        <option value="Красота"/>
+                        <option value="Культура"/>
+                        <option value="Магазины"/>
+                        <option value="Медицина"/>
+                        <option value="Недвижимость, строительство, ремонт"/>
+                        <option value="Оборудование"/>
+                        <option value="Образование, наука"/>
+                        <option value="Организация торжественных мероприятий"/>
+                        <option value="Промышленность"/>
+                        <option value="Развлечения"/>
+                        <option value="Реклама, полиграфия"/>
+                        <option value="Религия"/>
+                        <option value="Рестораны и кафе, доставка еды"/>
+                        <option value="СМИ"/>
+                        <option value="Социальная помощь"/>
+                        <option value="Спорт"/>
+                        <option value="Транспорт"/>
+                        <option value="Туризм и гостиницы"/>
+                        <option value="Услуги"/>
+                        <option value="Экстренные службы"/>
+                        <option value="SPA салоны"/>
+                        <option value="Web-дизайн"/>
+                        <option value="Аварийные службы"/>
+                        <option value="Авиагрузоперевозки"/>
+                        <option value="Автобазы, автоколонны"/>
+                        <option value="Автовокзалы"/>
+                        <option value="Автомагазины и автозапчасти"/>
+                        <option value="Автомойки"/>
+                        <option value="Авторазборы"/>
+                        <option value="Автосалоны"/>
+                        <option value="Автосервисы и автотехцентры"/>
+                        <option value="Автостоянки, парковки"/>
+                        <option value="Автошколы"/>
+                        <option value="Агентства недвижимости"/>
+                        <option value="Агентства по трудоустройству"/>
+                        <option value="Адвокаты"/>
+                        <option value="Административные учреждения"/>
+                        <option value="Администрации"/>
+                        <option value="АЗС"/>
+                        <option value="Алмазное сверление, резка стен"/>
+                        <option value="Аптеки"/>
+                        <option value="Аренда, прокат"/>
+                        <option value="Архивы"/>
+                        <option value="Архитектура и градостроение"/>
+                        <option value="Архитектурный дизайн"/>
+                        <option value="Ателье, ремонт одежды"/>
+                        <option value="АТС"/>
+                        <option value="Аудиоаппаратура"/>
+                        <option value="Аэропорты"/>
+                        <option value="Багетные мастерские"/>
+                        <option value="Банкетные залы"/>
+                        <option value="Банки, кредитование, обмен валют"/>
+                        <option value="Банкоматы"/>
+                        <option value="Барбершопы и мужские парикмахерские"/>
+                        <option value="Бассейны и аквапарки"/>
+                        <option value="Библиотеки"/>
+                        <option value="Бижутерия"/>
+                        <option value="Бизнес-услуги"/>
+                        <option value="Бильярд"/>
+                        <option value="Благотворительные фонды и организации"/>
+                        <option value="Больницы и госпитали (государственные)"/>
+                        <option value="Боулинг"/>
+                        <option value="БТИ"/>
+                        <option value="Букмекерские конторы"/>
+                        <option value="Буровые работы"/>
+                        <option value="Бухгалтерские услуги"/>
+                        <option value="Вентиляция, вытяжки, тепловое оборудование"/>
+                        <option value="Ветеринария"/>
+                        <option value="Витражи"/>
+                        <option value="Вневедомственная охрана"/>
+                        <option value="Водный"/>
+                        <option value="Водоснабжение и канализация"/>
+                        <option value="Военная комендатура"/>
+                        <option value="Военные комиссариаты и городские военкоматы"/>
+                        <option value="Воинские части"/>
+                        <option value="Все для праздника, товары"/>
+                        <option value="Вывоз мусора, утилизация"/>
+                        <option value="Выпечки"/>
+                        <option value="Выставки"/>
+                        <option value="Высшие учебные заведения"/>
+                        <option value="Газеты"/>
+                        <option value="Геодезические и кадастровые работы"/>
+                        <option value="Гольф-клубы"/>
+                        <option value="Гостиницы, отели, квартиры посуточно"/>
+                        <option value="Граверные, ювелирные услуги"/>
+                        <option value="Грузовой автосервис"/>
+                        <option value="Грузоперевозка водным транспортом"/>
+                        <option value="Грузоперевозки автомобильные"/>
+                        <option value="Грузоперевозки железнодорожные"/>
+                        <option value="Грузчики"/>
+                        <option value="Дворцы и дома культуры"/>
+                        <option value="Деловые центры"/>
+                        <option value="Депо"/>
+                        <option value="Детейлинг"/>
+                        <option value="Детективные агентства"/>
+                        <option value="Детская одежда, обувь"/>
+                        <option value="Детские государственные сады"/>
+                        <option value="Детские дома, приюты"/>
+                        <option value="Детские развлекательные центры"/>
+                        <option value="Детское питание"/>
+                        <option value="Диагностические центры"/>
+                        <option value="Дизайн интерьера"/>
+                        <option value="Дизайн полиграфической продукции"/>
+                        <option value="Дизайн рекламы"/>
+                        <option value="Добывающая промышленность"/>
+                        <option value="Дома и базы отдыха, турбазы, пансионаты, санатории"/>
+                        <option value="Дома инвалидов"/>
+                        <option value="Дома престарелых"/>
+                        <option value="Доставка воды"/>
+                        <option value="Доставка еды"/>
+                        <option value="Духовное образование"/>
+                        <option value="Духовное управление"/>
+                        <option value="Жалюзи, рольставни, рулонные шторы"/>
+                        <option value="ЖД вокзалы"/>
+                        <option value="Женские консультации"/>
+                        <option value="Жилищно-коммунальные услуги"/>
+                        <option value="Журналы"/>
+                        <option value="Заборы, ограждения"/>
+                        <option value="ЗАГСы"/>
+                        <option value="Заказ и доставка авиа и жд билетов"/>
+                        <option value="Замки, сейфы"/>
+                        <option value="Заповедники"/>
+                        <option value="Зоомагазины"/>
+                        <option value="Зоопарки"/>
+                        <option value="Игрушки, детские товары"/>
+                        <option value="Изготовление мебели на заказ"/>
+                        <option value="Изготовление печатей, штампов"/>
+                        <option value="Издательства"/>
+                        <option value="Инвестиции и ценные бумаги"/>
+                        <option value="Инжиниринговые услуги"/>
+                        <option value="Инструменты"/>
+                        <option value="Интернаты"/>
+                        <option value="Интернет провайдеры"/>
+                        <option value="Интернет-магазины"/>
+                        <option value="Интимные товары"/>
+                        <option value="Ипподромы, конные клубы"/>
+                        <option value="Исправительные учреждения, тюрьмы"/>
+                        <option value="Канцелярские товары"/>
+                        <option value="Караоке-клубы"/>
+                        <option value="Кафе, рестораны, пиццерии"/>
+                        <option value="Керамическая плитка, кафель"/>
+                        <option value="Кинологические организации"/>
+                        <option value="Кинотеатры"/>
+                        <option value="Клининговые услуги, стирка ковров"/>
+                        <option value="Книжные товары"/>
+                        <option value="Кованые изделия"/>
+                        <option value="Комиссионные магазины"/>
+                        <option value="Коммунальные службы"/>
+                        <option value="Компьютерные клубы"/>
+                        <option value="Компьютерные услуги"/>
+                        <option value="Компьютеры, оргтехника"/>
+                        <option value="Конференц-залы, переговорные комнаты"/>
+                        <option value="Кооперативы"/>
+                        <option value="Кофейни"/>
+                        <option value="Краски, лаки, лепнина, декоративные покрытия"/>
+                        <option value="Кровельные материалы"/>
+                        <option value="Курьерские службы, услуги"/>
+                        <option value="Лаборатории, анализы"/>
+                        <option value="Ландшафтный дизайн"/>
+                        <option value="Легкая промышленность"/>
+                        <option value="Ледовые дворцы, катки"/>
+                        <option value="Лесобазы"/>
+                        <option value="Лестницы"/>
+                        <option value="Ломбарды"/>
+                        <option value="Люстры и светотехника"/>
+                        <option value="Магазины бытовой техники и электроники"/>
+                        <option value="Магазины бытовой химии"/>
+                        <option value="Магазины дверей"/>
+                        <option value="Магазины для беременных"/>
+                        <option value="Магазины ковров"/>
+                        <option value="Магазины кондиционеров"/>
+                        <option value="Магазины кофе и чая"/>
+                        <option value="Магазины одежды"/>
+                        <option value="Магазины отопления и водоснабжения"/>
+                        <option value="Магазины посуды"/>
+                        <option value="Магазины табака и курительных принадлежностей"/>
+                        <option value="Магазины цветов, доставка цветов"/>
+                        <option value="Машиностроение"/>
+                        <option value="Мебельные магазины"/>
+                        <option value="Мёд, продукты пчеловодства"/>
+                        <option value="Медицинские НИИ"/>
+                        <option value="Медицинские центры, клиники"/>
+                        <option value="Медтовары, оборудование"/>
+                        <option value="Мечети"/>
+                        <option value="Микробиологическая промышленность"/>
+                        <option value="Министерства"/>
+                        <option value="Мобильные телефоны и устройства"/>
+                        <option value="Мода, агентства"/>
+                        <option value="Мойка фасадов"/>
+                        <option value="Морги"/>
+                        <option value="Музеи и выставки"/>
+                        <option value="Музыкальные инструменты"/>
+                        <option value="Музыкальные клубы, школы"/>
+                        <option value="МЧС"/>
+                        <option value="Мясо, полуфабрикаты"/>
+                        <option value="Налоговые инспекции"/>
+                        <option value="Напольные покрытия"/>
+                        <option value="Наружная реклама"/>
+                        <option value="Насосы, насосное оборудование"/>
+                        <option value="Натяжные потолки"/>
+                        <option value="Научные организации"/>
+                        <option value="Нижнее бельё, колготки"/>
+                        <option value="Новостройки, многоквартирные дома"/>
+                        <option value="Нотариус"/>
+                        <option value="Ночные клубы"/>
+                        <option value="Облицовка домов, фасадов"/>
+                        <option value="Облицовочные материалы"/>
+                        <option value="Обои"/>
+                        <option value="Оборудование для индустрии развлечений"/>
+                        <option value="Оборудование для общественного питания"/>
+                        <option value="Оборудование для пищевой промышленности"/>
+                        <option value="Оборудование для салонов красоты"/>
+                        <option value="Оборудование для сферы услуг"/>
+                        <option value="Обслуживание банкетов"/>
+                        <option value="Обувные магазины"/>
+                        <option value="Общежития"/>
+                        <option value="Общества инвалидов"/>
+                        <option value="Общественные организации"/>
+                        <option value="Оздоровительные учреждения"/>
+                        <option value="Озеленение, благоустройство"/>
+                        <option value="Окна"/>
+                        <option value="Операторы сотовой связи"/>
+                        <option value="Оптика"/>
+                        <option value="Оптовая доставка товаров"/>
+                        <option value="Организация мероприятий"/>
+                        <option value="Ортопедические товары, матрасы и подушки"/>
+                        <option value="Отделения и участковые пункты полиции"/>
+                        <option value="Оформление виз"/>
+                        <option value="Оформление залов, столов, машин"/>
+                        <option value="Охота и рыбалка"/>
+                        <option value="Охрана и безопасность"/>
+                        <option value="Охрана окружающей среды"/>
+                        <option value="Охранное оборудование"/>
+                        <option value="Оценка, экспертиза"/>
+                        <option value="Парки культуры и отдыха"/>
+                        <option value="Парфюмерия, косметика"/>
+                        <option value="Паспортные столы"/>
+                        <option value="Пассажирские перевозки"/>
+                        <option value="Певцы, танцоры, музыканты, ведущие"/>
+                        <option value="Пенсионные фонды"/>
+                        <option value="Пескоструйная обработка"/>
+                        <option value="Пиротехника"/>
+                        <option value="Пищевая промышленность"/>
+                        <option value="Пляжи"/>
+                        <option value="Пожарная служба"/>
+                        <option value="Полиграфия"/>
+                        <option value="Поликлиники"/>
+                        <option value="Политические организации"/>
+                        <option value="Полиция"/>
+                        <option value="Порты"/>
+                        <option value="Постельное белье, одеяла, подушки"/>
+                        <option value="Почтовые отделения"/>
+                        <option value="Правительственные учреждения"/>
+                        <option value="Прачечные, химчистка"/>
+                        <option value="Предметы интерьера"/>
+                        <option value="Прием металла, макулатуры, стеклотары"/>
+                        <option value="Приправы, специи, пряности"/>
+                        <option value="Приюты для животных"/>
+                        <option value="Программное обеспечение"/>
+                        <option value="Проектные организации"/>
+                        <option value="Производство ювелирных изделий"/>
+                        <option value="Прокат оборудования"/>
+                        <option value="Прокуратура и надзор"/>
+                        <option value="Промышленное оборудование"/>
+                        <option value="Промышленное производство"/>
+                        <option value="Профессиональные курсы"/>
+                        <option value="Психологическая помощь"/>
+                        <option value="Радио"/>
+                        <option value="Развивающие центры"/>
+                        <option value="Развлекательные центры и комплексы"/>
+                        <option value="Разработка, поддержка и продвижение web-сайтов"/>
+                        <option value="Реабилитационные центры"/>
+                        <option value="Рекламные агентства"/>
+                        <option value="Религиозные организации"/>
+                        <option value="Религиозные СМИ"/>
+                        <option value="Религиозные товары"/>
+                        <option value="Ремонт бытовой техники"/>
+                        <option value="Ремонт и реставрация мебели"/>
+                        <option value="Ремонт и установка автостекол"/>
+                        <option value="Ремонт обуви, пошив"/>
+                        <option value="Репетиторы"/>
+                        <option value="Ритуальные услуги и принадлежности"/>
+                        <option value="Родильные дома"/>
+                        <option value="Роспись художественная"/>
+                        <option value="Рынки"/>
+                        <option value="Садовые центры"/>
+                        <option value="Салоны красоты"/>
+                        <option value="Самоуправление"/>
+                        <option value="Санитарные услуги"/>
+                        <option value="Сантехника"/>
+                        <option value="Сауны, бани"/>
+                        <option value="Свадебные салоны, магазины"/>
+                        <option value="Сварочные работы"/>
+                        <option value="Сельскохозяйственная промышленность"/>
+                        <option value="Сельскохозяйственное оборудование"/>
+                        <option value="Сервисное обслуживание"/>
+                        <option value="Сервисные авто-центры"/>
+                        <option value="Сертификация"/>
+                        <option value="Службы знакомств, брачные агентства"/>
+                        <option value="Службы спасения"/>
+                        <option value="Службы судебных приставов"/>
+                        <option value="Солнечные батареи и панели, альтернативная энергетика"/>
+                        <option value="Социальная защита"/>
+                        <option value="Социальные сети"/>
+                        <option value="Спецодежда"/>
+                        <option value="Спортивные клубы, школы, секции, базы"/>
+                        <option value="Спортивные товары"/>
+                        <option value="Справочные службы"/>
+                        <option value="Спутниковое телевидение"/>
+                        <option value="Средние специальные учебные заведения"/>
+                        <option value="Стадионы, спортивные комплексы"/>
+                        <option value="Стекольная промышленность"/>
+                        <option value="Столовые и фаст-фуд"/>
+                        <option value="Столы находок"/>
+                        <option value="Стоматологии"/>
+                        <option value="Стоматологические магазины"/>
+                        <option value="Страхование"/>
+                        <option value="Стрелковые клубы"/>
+                        <option value="Строительная промышленность"/>
+                        <option value="Строительное оборудование"/>
+                        <option value="Строительные смеси и конструкции"/>
+                        <option value="Строительные, ремонтные работы"/>
+                        <option value="Строительство бассейнов и обслуживание"/>
+                        <option value="Строительство газовых сетей"/>
+                        <option value="Строительство домов, таунхаусов"/>
+                        <option value="Строительство и ремонт дорог"/>
+                        <option value="Стройматериалы"/>
+                        <option value="Студии дизайна"/>
+                        <option value="Студии и школы танцев"/>
+                        <option value="Стяжка пола"/>
+                        <option value="Сувениры, подарки"/>
+                        <option value="Суды"/>
+                        <option value="Сумки, ремни, аксессуары"/>
+                        <option value="Супермаркеты и продуктовые магазины"/>
+                        <option value="Сыпучие строительные материалы"/>
+                        <option value="Такси"/>
+                        <option value="Таможня"/>
+                        <option value="Тара и упаковка"/>
+                        <option value="Тату-салоны"/>
+                        <option value="Театр"/>
+                        <option value="Телевидение"/>
+                        <option value="Телефоны доверия"/>
+                        <option value="Теннисные корты"/>
+                        <option value="Типография"/>
+                        <option value="Товары для дома"/>
+                        <option value="Товары для творчества"/>
+                        <option value="Топливная промышленность"/>
+                        <option value="Торговое и складское оборудование"/>
+                        <option value="Торговые центры"/>
+                        <option value="Травмпункты"/>
+                        <option value="Тренажерные залы, фитнес-клубы"/>
+                        <option value="Туристические агентства"/>
+                        <option value="Тюнинг"/>
+                        <option value="Упаковка, упаковочные материалы"/>
+                        <option value="Управления и инспекции"/>
+                        <option value="Услуги флориста"/>
+                        <option value="Федеральные службы"/>
+                        <option value="Федерации спорта"/>
+                        <option value="Финансовые услуги"/>
+                        <option value="Фитодизайн"/>
+                        <option value="Фонды"/>
+                        <option value="Фото и видео услуги"/>
+                        <option value="Фото, видео товары"/>
+                        <option value="Фурнитура, комплектующие"/>
+                        <option value="Футбольные поля"/>
+                        <option value="Химическая промышленность"/>
+                        <option value="Хозяйственные товары"/>
+                        <option value="Художественная лепка"/>
+                        <option value="Центры паровых коктейлей"/>
+                        <option value="Церкви, храмы, соборы"/>
+                        <option value="Цирк"/>
+                        <option value="Частные детские сады"/>
+                        <option value="Частные учебные заведения"/>
+                        <option value="Шахматные клубы"/>
+                        <option value="Шиномонтаж"/>
+                        <option value="Шины и Диски"/>
+                        <option value="Школы (государственные)"/>
+                        <option value="Шторы, текстиль"/>
+                        <option value="Штукатурные работы"/>
+                        <option value="Эвакуатор"/>
+                        <option value="Экологические услуги"/>
+                        <option value="Экскурсии"/>
+                        <option value="Электроинструмент"/>
+                        <option value="Электрооборудование"/>
+                        <option value="Ювелирные изделия, часы"/>
+                        <option value="Ювелирные мастерские"/>
+                        <option value="Юридические услуги"/>
+                    </datalist>
+                </div>
+            </div>
+
+            <label class="firm-form__field">
+                <span class="firm-form__label">Название организации*</span>
+                <input type="text" name="title" placeholder="" required>
+            </label>
+
+            <div class="firm-form__field">
+                <p class="firm-form__label firm-form__label--image">Логотип или <span class="desktop">главное</span> фото организации</p>
+                <div
+                        class="firm-form__file"
+                        ondragover="onFilesDragOver(event)"
+                        ondragleave="onFilesDragLeave(event)"
+                        ondragend="onFilesDragEnd(event)"
+                        ondrop="onFilesDrop(event)"
+                >
+                    <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M35.5 25V31.6667C35.5 32.5507 35.1488 33.3986 34.5237 34.0237C33.8986 34.6488 33.0507 35 32.1667 35H8.83333C7.94928 35 7.10143 34.6488 6.47631 34.0237C5.85119 33.3986 5.5 32.5507 5.5 31.6667V25"
+                                stroke="#1E85C7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.168 16.6667L20.5013 25L28.8346 16.6667" stroke="#1E85C7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.5 25V5" stroke="#1E85C7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p class="firm-form__file-description">
+                        <strong>Перетащите сюда</strong>
+                        <span>или</span>
+                        <input id="firm-form-images" type="file" name="imgfile" placeholder="" onchange="onFilesChange(event)">
+                        <label for="firm-form-images">Выберите файл</label>
+                    </p>
+                </div>
+                <ul class="firm-form__file-list"></ul>
+            </div>
+
+            <label class="firm-form__field">
+                <p class="firm-form__label firm-form__label--tags">Теги <span>(ключевые слова через запятую)</span></p>
+                <textarea class="firm-form__tags" name="tags" placeholder=""></textarea>
+            </label>
+
+            <label class="firm-form__field">
+                <span class="firm-form__label">Город</span>
+                <div class="firm-form__select">
+                    <select name="item_city" required>
+                        <option value="" disabled selected hidden>Краснодар</option>
+                        <option value="Азов">Азов</option>
+                        <option value="Армавир">Армавир</option>
+                        <option value="Анапа">Анапа</option>
+                        <option value="Астрахань">Астрахань</option>
+                        <option value="Архыз">Архыз</option>
+                        <option value="Назрань">Назрань</option>
+                        <option value="Балаково">Балаково</option>
+                        <option value="Буйнакск">Буйнакск</option>
+                        <option value="Волгоград">Волгоград</option>
+                        <option value="Волгодонск">Волгодонск</option>
+                        <option value="Волжский">Волжский</option>
+                        <option value="Владикавказ">Владикавказ</option>
+                        <option value="Геленджик">Геленджик</option>
+                        <option value="Горячий ключ">Горячий ключ</option>
+                        <option value="Грозный">Грозный</option>
+                        <option value="Дербент">Дербент</option>
+                        <option value="Домбай">Домбай</option>
+                        <option value="Ейск">Ейск</option>
+                        <option value="Калининград">Калининград</option>
+                        <option value="Избербаш">Избербаш</option>
+                        <option value="Каспийск">Каспийск</option>
+                        <option value="Казань">Казань</option>
+                        <option value="Краснодар">Краснодар</option>
+                        <option value="Крымск">Крымск</option>
+                        <option value="Кизилюрт">Кизилюрт</option>
+                        <option value="Самара">Самара</option>
+                        <option value="Махачкала">Махачкала</option>
+                        <option value="Майкоп">Майкоп</option>
+                        <option value="Минеральные Воды">Минеральные Воды</option>
+                        <option value="Нальчик">Нальчик</option>
+                        <option value="Набережные челны">Набережные челны</option>
+                        <option value="Невинномысск">Невинномысск</option>
+                        <option value="Новочеркасск">Новочеркасск</option>
+                        <option value="Новошахтинск">Новошахтинск</option>
+                        <option value="Новороссийск">Новороссийск</option>
+                        <option value="Пятигорск">Пятигорск</option>
+                        <option value="Ростов-на-Дону">Ростов-на-Дону</option>
+                        <option value="Саратов">Саратов</option>
+                        <option value="Севастополь">Севастополь</option>
+                        <option value="Сочи">Сочи</option>
+                        <option value="Симферополь">Симферополь</option>
+                        <option value="Славянск-на-Кубани">Славянск-на-Кубани</option>
+                        <option value="Ставрополь">Ставрополь</option>
+                        <option value="Таганрог">Таганрог</option>
+                        <option value="Туапсе">Туапсе</option>
+                        <option value="Усть-Лабинск">Усть-Лабинск</option>
+                        <option value="Хасавюрт">Хасавюрт</option>
+                        <option value="Черкесск">Черкесск</option>
+                        <option value="Шахты">Шахты</option>
+                        <option value="Элиста">Элиста</option>
+                        <option value="Энгельс">Энгельс</option>
+                        <option value="Ялта">Ялта</option>
+                    </select>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6L8 10L12 6" fill="#666666"/>
+                    </svg>
+                </div>
+            </label>
+
+            <div class="firm-form__contacts firm-form__contacts--primary">
+                <label class="firm-form__field small">
+                    <span class="firm-form__label">Телефон</span>
+                    <input type="tel" name="telephone" placeholder="">
+                </label>
+
+                <label class="firm-form__field medium">
+                    <span class="firm-form__label">E-mail</span>
+                    <input type="email" name="email" placeholder="">
+                </label>
+
+                <label class="firm-form__field small">
+                    <span class="firm-form__label">Сайт</span>
+                    <input type="text" name="site" placeholder="">
+                </label>
+
+                <label class="firm-form__field medium">
+                    <span class="firm-form__label">График работы</span>
+                    <input type="text" name="schedule" placeholder="">
+                </label>
+
+                <label class="firm-form__field">
+                    <span class="firm-form__label">Адрес фирмы</span>
+                    <textarea class="firm-form__address" rows="1" name="address" placeholder=""></textarea>
+                </label>
+
+                <div class="firm-form__field">
+                    <span class="firm-form__label">Отметьте фирму на карте</span>
+                    <input type="hidden" name="coords">
+                    <div class="firm-form-map"></div>
+                </div>
+            </div>
+
+            <section class="firm-form__contacts-extra">
+                <h2 class="firm-form__contacts-extra-title">
+                    Дополнительные телефон<br class="mobile"/> и&nbsp;адрес <span>необязательно</span>
+                </h2>
+            </section>
+
+            <div class="firm-form__field firm-form__field--add-address">
+                <button class="firm-form__add-address" type="button" onclick="onAddAddressClick(event)">Добавить ещё телефон и адрес</button>
+            </div>
+
+            <label class="firm-form__field">
+                <span class="firm-form__label">Описание фирмы</span>
+                <textarea id="firm-form-description" class="firm-form__description" name="description" placeholder=""></textarea>
+            </label>
+
+            <div class="firm-form__checkbox">
+                <input id="firm-form-policy" type="checkbox" name="policy" required>
+                <label for="firm-form-policy">
+                    <span class="desktop">Ввод данных подтверждает ваше согласие с политикой конфиденциальности и обработкой персональных данных</span>
+                    <span class="mobile">Ознакомлен и согласен с <b>политикой конфиденциальности</b></span>
+                </label>
+            </div>
+
+            <div class="firm-form__captcha">
+                <div id="captcha" class="simpleCaptcha"></div>
+            </div>
+
+            <div class="firm-form__submit">
+                <button type="submit">Опубликовать</button>
+                <button type="reset" onclick="onResetClick(event)">Отменить</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<template id="firm-form-file-template">
+    <li class="firm-form__file-item">
+        <div class="firm-form-file" data-state="none" style="--progress: 0;">
+            <input type="hidden" name="imgfile_id">
+            <svg class="firm-form-file__state" data-state="none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M21.668 3.33334H10.0013C9.11725 3.33334 8.2694 3.68453 7.64428 4.30965C7.01916 4.93478 6.66797 5.78262 6.66797 6.66668V33.3333C6.66797 34.2174 7.01916 35.0652 7.64428 35.6904C8.2694 36.3155 9.11725 36.6667 10.0013 36.6667H30.0013C30.8854 36.6667 31.7332 36.3155 32.3583 35.6904C32.9834 35.0652 33.3346 34.2174 33.3346 33.3333V15L21.668 3.33334Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                />
+                <path d="M21.668 3.33334V15H33.3346" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <strong class="firm-form-file__name">-</strong>
+            <span class="firm-form-file__size">-</span>
+            <div class="firm-form-file__actions">
+                <svg class="firm-form-file__action firm-form-file__action--none" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.3346 4L6.0013 11.3333L2.66797 8" stroke="#8BCE48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <button class="firm-form-file__action firm-form-file__action--remove" type="button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 4L12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button class="firm-form-file__action firm-form-file__action--retry" type="button">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_3620_32548)">
+                            <path d="M15.332 2.66666V6.66666H11.332" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M0.667969 13.3333V9.33334H4.66797" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path
+                                    d="M2.3413 6.00001C2.67941 5.04453 3.25406 4.19028 4.01161 3.51696C4.76917 2.84363 5.68495 2.37319 6.67349 2.14952C7.66204 1.92584 8.69114 1.95624 9.66476 2.23786C10.6384 2.51948 11.5248 3.04315 12.2413 3.76001L15.3346 6.66668M0.667969 9.33334L3.7613 12.24C4.4778 12.9569 5.36422 13.4805 6.33784 13.7622C7.31147 14.0438 8.34056 14.0742 9.32911 13.8505C10.3177 13.6268 11.2334 13.1564 11.991 12.4831C12.7485 11.8097 13.3232 10.9555 13.6613 10"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_3620_32548">
+                                <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </li>
+</template>
+
+<template id="firm-form-contacts-extra-template">
+    <div class="firm-form__contacts">
+        <label class="firm-form__field small">
+            <span class="firm-form__label">Телефон</span>
+            <input type="tel" name="addresses[0][telephone]" placeholder="">
+        </label>
+
+        <label class="firm-form__field">
+            <span class="firm-form__label">Адрес фирмы</span>
+            <textarea class="firm-form__address" rows="1" name="addresses[0][address]" placeholder=""></textarea>
+        </label>
+
+        <div class="firm-form__field">
+            <span class="firm-form__label">Отметьте адрес на карте</span>
+            <input type="hidden" name="addresses[0][coords]">
+            <div class="firm-form-map"></div>
+        </div>
+    </div>
+</template>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8f37b148-0d6a-4ed2-a0f1-ed828be9f0ab"></script>
+<script src="https://makhachkala.dimpoisk.ru/includes/jquery/jquery.js"></script>
+<script src="https://makhachkala.dimpoisk.ru/plugins/p_simplecaptcha/jquerysimplecaptcha/jquery.simpleCaptcha.js"></script>
+<script src="https://makhachkala.dimpoisk.ru/plugins/p_ckeditor/editor/ckeditor.js"></script>
+<script src="./nanoid.min.js"></script>
+<script src="./firm-form.js"></script>
+</body>
+</html>
