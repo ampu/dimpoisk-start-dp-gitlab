@@ -402,7 +402,7 @@
     image.xhr = uploadFormData(`https://httpbin.org/post`, form, ({state, progress, data}) => {
       image.state = state;
       image.progress = progress;
-      image.remoteId = (data && data.form.remoteId) || ``;
+      image.remoteId = (data && data.form && data.form.remoteId) || ``;
       if (image.state !== OperationState.PENDING) {
         image.xhr = null;
       }

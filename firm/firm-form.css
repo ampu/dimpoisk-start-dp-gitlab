@@ -80,6 +80,11 @@ body {
     padding: 200px 0;
 }
 
+.firm-form button,
+.firm-form label {
+    transition: color 0.3s, background-color 0.3s;
+}
+
 @media (max-width: 1150px) {
     .firm-form {
         padding: 155px 0;
@@ -184,6 +189,7 @@ body {
     align-items: center;
     font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
     border: 1px solid #dedede;
+    background-color: transparent;
     border-radius: 3px;
     appearance: none;
 }
