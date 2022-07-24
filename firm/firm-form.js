@@ -221,8 +221,8 @@
 
     footer.before(element);
 
-    scrollIntoViewIfNeeded(element);
     phoneElement.focus();
+    scrollIntoViewIfNeeded(element);
 
     return {
       unmount() {
