@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Наше меню</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.min.css">
+    <link rel="stylesheet" href="./menu-mobile.css">
+</head>
+<body>
+
+<section class="foodMenu">
+    <h2 class="sr-only">Наше меню</h2>
+    <ul class="foodMenu__categories">
+        <li class="foodMenu__category foodMenu__category--active">
+            <a class="foodMenu__categoryName" href="#" onclick="onMenuCategoryClick(event)">Пицца</a>
+            <ul class="foodMenu__dishes">
+                <li class="dish">
+                    <img class="dish__image" src="./images/0.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="FIkufaN61_sbPIB8muOFZ">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/1.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="A4wzRnawGVXceGZSiR7I2">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/2.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="Urn25fGz2f3l74t5rN6a6">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="foodMenu__category">
+            <a class="foodMenu__categoryName" href="#" onclick="onMenuCategoryClick(event)">Пицца</a>
+            <ul class="foodMenu__dishes">
+                <li class="dish">
+                    <img class="dish__image" src="./images/0.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="FIkufaN61_sbPIB8muOFZ">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/1.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="A4wzRnawGVXceGZSiR7I2">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/2.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="Urn25fGz2f3l74t5rN6a6">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/3.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="asOMbewmlVu5jbX8lCtU-">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/4.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="aRUobTE68ocDhuxAkBTHq">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/5.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="AsavzDJlD7YmrpowZNT_3">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/6.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="Zx5XpyXPfoJijTs4RJtZZ">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+                <li class="dish">
+                    <img class="dish__image" src="./images/7.jpg" alt="" width="100" height="100">
+                    <div class="dish__inner">
+                        <div class="dish__title">Маргарита Гурмэ средняя 30 см</div>
+                        <div class="dish__description">Пикантная пепперони, сладкий соус альфредо, моцарелла</div>
+                        <div class="dish__prices">
+                            <span class="dish__price">569 руб</span>
+                            <del class="dish__price dish__price--old">600 руб</del>
+                        </div>
+                        <form class="dish__add-to-cart" method="post" action="https://httpbin.org/post">
+                            <input type="hidden" name="action" value="add_to_cart">
+                            <input type="hidden" name="product_id" value="5TzF3xP0MLi5s1VAEl5fh">
+                            <button type="submit">В Корзину</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li class="foodMenu__category">
+            <a class="foodMenu__categoryName" href="#" onclick="onMenuCategoryClick(event)">Пицца</a>
+            <ul class="foodMenu__dishes"></ul>
+        </li>
+    </ul>
+    <p class="foodMenu__postscript">
+        Также в меню чуду всех видов, курзе всех видов, хинкал всех видов, завтраки соусы, десерты, напитки.
+        <strong class="foodMenu__enjoy"> Приятного Вам аппетита и отличного отдыха! </strong>
+    </p>
+</section>
+
+<script> {
+  const initMenu = () => {
+    const dishes = document.querySelectorAll(`.foodMenu__dishes`);
+    for (const dish of dishes) {
+      dish.style.setProperty(`--height`, `${dish.scrollHeight || 60}px`);
+    }
+  };
+
+  window.addEventListener(`DOMContentLoaded`, initMenu);
+
+  window.onMenuCategoryClick = (evt) => {
+    evt.preventDefault();
+    evt.currentTarget.parentNode.classList.toggle(`foodMenu__category--active`);
+  };
+}
+</script>
+</body>
+</html>

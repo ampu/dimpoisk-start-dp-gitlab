@@ -1,0 +1,124 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font: 400 14px "Rubik", "Tahoma", sans-serif;
+    color: #444;
+    background-color: #f9f9f9;
+}
+
+.product-list {
+    padding: 0;
+    padding-left: 15px;
+    width: 840px;
+    box-sizing: border-box;
+    float: right;
+    margin-bottom: 200px;
+}
+
+.product-list h1 {
+    margin-top: 20px;
+    margin-bottom: 32px;
+    font: 500 24px/22px "Rubik", "Tahoma", sans-serif;
+}
+
+.product-list__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+.dish {
+    float: left;
+    width: 255px;
+    min-height: 382px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font: 500 18px/normal "Rubik", "Tahoma", sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+    transition: box-shadow 0.3s;
+}
+
+.dish:hover {
+    border: 1px solid #dcdcdc;
+    box-shadow: 2px 3px 6px #ccc;
+}
+
+.dish__image {
+    width: 255px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.dish__inner {
+    padding: 16px;
+    padding-top: 8px;
+    display: flex;
+    flex-flow: column;
+}
+
+.dish__title {
+    margin-bottom: 8px;
+}
+
+.dish__description {
+    margin-bottom: 8px;
+    font: 400 14px/normal "Rubik", "Tahoma", sans-serif;
+    color: #999;
+}
+
+.dish__prices {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.dish__price {
+    margin-right: 4px;
+}
+
+.dish__prices del {
+    color: #999;
+}
+
+.dish__add-to-cart [type=submit] {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6px 16px;
+    font: 400 16px/normal "Rubik", "Tahoma", sans-serif;
+    color: #f2394d;
+    background-color: #fff;
+    border: 1px solid rgba(242, 57, 77, 0.3);
+    cursor: pointer;
+    transition: color 0.25s, background-color 0.25s;
+}
+
+.dish__add-to-cart [type=submit]:hover {
+    color: #fff;
+    background-color: #f2394d;
+}
+
+.dish__add-to-cart [type=submit]:active {
+    opacity: 0.8;
+}

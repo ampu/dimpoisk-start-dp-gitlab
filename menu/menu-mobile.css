@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+.sr-only {
+    position: absolute;
+    z-index: -9999;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    overflow: hidden;
+    border: none;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font: 400 14px "Rubik", "Tahoma", sans-serif;
+    color: #444;
+    background-color: #f9f9f9;
+}
+
+.foodMenu {
+    width: 320px;
+    padding: 0 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+}
+
+.foodMenu__categories {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+}
+
+.foodMenu__category {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.foodMenu__categoryName {
+    display: block;
+    position: relative;
+    padding: 15px 20px 15px 0;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    transition: color 0.3s;
+}
+
+.foodMenu__categoryName::before,
+.foodMenu__categoryName::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 14px;
+    height: 1px;
+    background: #bbb;
+    transition: 0.2s;
+}
+
+.foodMenu__categoryName::before {
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.foodMenu__categoryName::after {
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.foodMenu__category--active {
+    margin-bottom: 8px;
+    border-color: transparent;
+}
+
+.foodMenu__category--active .foodMenu__categoryName {
+    color: #f2394d;
+}
+
+.foodMenu__category--active .foodMenu__categoryName::before {
+    opacity: 0;
+}
+
+.foodMenu__category--active .foodMenu__categoryName::after {
+    background: #333;
+}
+
+.foodMenu__category--active .foodMenu__dishes {
+    height: var(--height);
+    margin-bottom: -8px;
+}
+
+.foodMenu__category--active .foodMenu__dishes:empty::after {
+    content: "Ожидается поступление";
+    padding: 20px;
+    font: 400 16px/normal "Rubik", "Tahoma", sans-serif;
+    text-align: center;
+    color: #999;
+    background-color: #f9f9f9;
+}
+
+.foodMenu__dishes {
+    display: flex;
+    flex-flow: column;
+    margin: 0 -30px;
+    padding: 0 10px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+
+.foodMenu__postscript {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 40px 0;
+    font: 400 14px/24px "Rubik", "Tahoma", sans-serif;
+    color: #666;
+}
+
+.foodMenu__enjoy {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    font: 700 14px/24px "Rubik", "Tahoma", sans-serif;
+    font-style: italic;
+    color: #333;
+}
+
+.dish {
+    display: flex;
+    margin-bottom: 8px;
+    padding: 16px 20px;
+    font: 500 16px/normal "Rubik", "Tahoma", sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+}
+
+.dish:hover {
+    box-shadow: 2px 3px 6px #ccc;
+}
+
+.dish__image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.dish__inner {
+    margin-left: 12px;
+    display: flex;
+    flex-flow: column;
+}
+
+.dish__title {
+    margin-bottom: 4px;
+}
+
+.dish__description {
+    margin-bottom: 4px;
+    font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+    color: #999;
+}
+
+.dish__prices {
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.dish__price {
+    margin-right: 4px;
+}
+
+.dish__prices del {
+    font-size: 14px;
+    color: #999;
+}
+
+.dish__add-to-cart [type=submit] {
+    margin: 0;
+    padding: 0;
+    padding: 6px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+    color: #f2394d;
+    background-color: #f9f9f9;
+    border: 1px solid rgba(242, 57, 77, 0.3);
+    cursor: pointer;
+    transition: color 0.25s, background-color 0.25s;
+}
+
+.dish__add-to-cart [type=submit]:hover {
+    color: #f9f9f9;
+    background-color: #f2394d;
+}
+
+.dish__add-to-cart [type=submit]:active {
+    opacity: 0.8;
+}
