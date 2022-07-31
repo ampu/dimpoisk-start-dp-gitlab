@@ -77,7 +77,7 @@ body {
 
 .weather-animation .weather__summary:hover {
   z-index: 1;
-  box-shadow: 2px 3px 6px #ccc;
+  box-shadow: 2px 3px 6px #f1f1f1;
   transform: scale(1.01);
 }
 
@@ -223,7 +223,7 @@ body {
 
 .weather-animation .weather__day:hover {
   z-index: 1;
-  box-shadow: 2px 3px 6px #ccc;
+  box-shadow: 2px 3px 6px #f1f1f1;
   transform: scale(1.01);
 }
 

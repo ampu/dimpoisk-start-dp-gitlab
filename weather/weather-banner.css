@@ -53,8 +53,8 @@ body {
 }
 
 #big_weather_block.weather-banner:hover {
-  border: 1px solid #dcdcdc;
-  box-shadow: 2px 3px 6px #ccc;
+  border: 1px solid transparent;
+  box-shadow: 2px 3px 6px #f1f1f1;
 }
 
 .weather-banner__title {

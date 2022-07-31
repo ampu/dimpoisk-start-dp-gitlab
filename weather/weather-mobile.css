@@ -94,7 +94,7 @@ body {
 
 .weather-mobile-animation .weather-mobile__summary:hover {
   z-index: 1;
-  box-shadow: 2px 3px 6px #ccc;
+  box-shadow: 2px 3px 6px #f1f1f1;
   transform: scale(1.01);
 }
 
@@ -210,10 +210,13 @@ body {
 }
 
 .weather-mobile__days {
+  position: relative;
   display: flex;
   flex-flow: column;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: -10px;
+  margin-top: -10px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -243,7 +246,7 @@ body {
 
 .weather-mobile-animation .weather-mobile__day:hover {
   z-index: 1;
-  box-shadow: 2px 3px 6px #ccc;
+  box-shadow: 2px 3px 6px #f1f1f1;
   transform: scale(1.01);
 }
 
