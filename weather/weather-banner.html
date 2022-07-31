@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Баннер погоды</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.min.css">
+    <link rel="stylesheet" href="./weather-banner.css">
+  </head>
+  <body>
+    <article class="weather-banner" id="big_weather_block">
+      <header class="weather-banner__header">
+        <h1 class="weather-banner__title"><a href="https://makhachkala.dimpoisk.ru/weather">Погода в Махачкале</a></h1>
+        <div class="weather-banner__date">Сегодня<span class="weather-banner__date-value">Вт 12 июля</span></div>
+      </header>
+      <div class="weather-banner__temperature">
+        <div class="weather-banner__temperature-header"><img class="weather-banner__temperature-icon" src="./images/weather/icons/snowy.svg" width="70" height="70" alt="">25&deg;</div>
+        <div class="weather-banner__temperature-description">преимущественно солнечно
+          <div class="weather-banner__temperature-time-values"><span class="weather-banner__temperature-time-value">днём: 25&deg;</span><span class="weather-banner__temperature-time-value">ночью: 22&deg;</span></div>
+        </div>
+      </div>
+      <ul class="weather-banner__stats">
+        <li class="weather-banner__stat"><span class="weather-banner__stat-title">Ветер</span><img class="weather-banner__stat-icon" src="https://dimpoisk.ru/images/icons/wind.svg" width="24" height="24" alt=""><span class="weather-banner__stat-value">5 м/с</span><span class="weather-banner__stat-text">ю-з</span></li>
+        <li class="weather-banner__stat"><span class="weather-banner__stat-title">Влажность</span><img class="weather-banner__stat-icon" src="https://dimpoisk.ru/images/icons/vlazh.svg" width="24" height="24" alt=""><span class="weather-banner__stat-value">86%</span><span class="weather-banner__stat-text">высокая</span></li>
+        <li class="weather-banner__stat"><span class="weather-banner__stat-title">Солнце</span><img class="weather-banner__stat-icon" src="https://dimpoisk.ru/images/icons/sunset.svg" width="24" height="24" alt=""><span class="weather-banner__stat-value">19:27</span><span class="weather-banner__stat-text">Восход: 04:24</span></li>
+        <li class="weather-banner__stat"><span class="weather-banner__stat-title">Давление</span><img class="weather-banner__stat-icon" src="https://dimpoisk.ru/images/icons/atm_dav.svg" width="24" height="24" alt=""><span class="weather-banner__stat-value">1030</span><span class="weather-banner__stat-text">мм. рт. ст.</span></li>
+      </ul>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+.sr-only {
+  position: absolute;
+  z-index: -9999;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font: 400 14px "Rubik", "Tahoma", sans-serif;
+  color: #444;
+  background-color: #f9f9f9;
+}
+
+.clear {
+  clear: both;
+}
+
+#weather.weather {
+  width: 1150px;
+  padding: 56px 20px;
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+  color: #444;
+}
+
+.weather__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font: 500 24px/28px "Rubik", "Tahoma", sans-serif;
+  color: #444;
+}
+
+.weather__inner {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.weather__summary {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  flex-flow: column;
+  width: 450px;
+  background: #ffffff;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+}
+
+.weather-animation .weather__summary {
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.weather-animation .weather__summary:hover {
+  z-index: 1;
+  box-shadow: 2px 3px 6px #ccc;
+  transform: scale(1.01);
+}
+
+.weather__date {
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 8px;
+  font: 400 18px/21px "Rubik", "Tahoma", sans-serif;
+  color: #333;
+}
+
+.weather__date-short {
+  margin-right: 8px;
+}
+
+.weather__date-value {
+  color: #bbb;
+}
+
+.weather__temperature {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.weather__temperature-header {
+  position: relative;
+  display: flex;
+  flex-flow: wrap;
+  padding-right: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  font: 400 64px/76px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather__temperature-header::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  right: 0;
+  width: 1px;
+  background-color: #eeeeee;
+}
+
+.weather__temperature-icon {
+  display: flex;
+  flex-flow: wrap;
+  width: 70px;
+  height: 70px;
+  margin-right: 16px;
+  font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+}
+
+.weather__temperature-description {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 16px;
+  width: 190px;
+  font: 500 16px/19px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather__temperature-time-values {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 4px;
+  font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather__temperature-time-value:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.weather__stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -8px;
+  margin-bottom: -8px;
+}
+
+.weather__stat {
+  padding: 8px 2px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  width: calc(25% - 8px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+}
+
+.weather__stat-title {
+  margin-bottom: 4px;
+  font: 400 14px/17px "Rubik", "Tahoma", sans-serif;
+  color: #ccc;
+}
+
+.weather__stat-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+}
+
+.weather__stat-value {
+  font: 400 22px/24px "Rubik", "Tahoma", sans-serif;
+  color: #666;
+}
+
+.weather__stat-text {
+  font: 400 13px/17px "Rubik", "Tahoma", sans-serif;
+  color: #666;
+}
+
+.weather__days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.weather__day {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  width: 110px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+}
+
+.weather-animation .weather__day {
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.weather-animation .weather__day:hover {
+  z-index: 1;
+  box-shadow: 2px 3px 6px #ccc;
+  transform: scale(1.01);
+}
+
+.weather__day-date {
+  display: flex;
+  flex-flow: column;
+  font: 400 18px/21px "Rubik", "Tahoma", sans-serif;
+  color: #333;
+}
+
+.weather__day-date-value {
+  display: flex;
+  margin-bottom: 16px;
+  margin-top: 4px;
+  font: 400 14px/17px "Rubik", "Tahoma", sans-serif;
+  color: #bbb;
+}
+
+.weather__day-temperature-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+}
+
+.weather__day-temperature-time-values {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 8px;
+  font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+  color: #999;
+}
+
+.weather__day-temperature-time-value:first-of-type {
+  display: flex;
+  margin-bottom: 4px;
+  font: 400 24px/28px "Rubik", "Tahoma", sans-serif;
+  color: #333;
+}
+
+.weather__day-temperature-text {
+  display: flex;
+  height: 34px;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font: 400 14px/17px "Rubik", "Tahoma", sans-serif;
+  color: #333;
+}

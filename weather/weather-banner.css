@@ -1,0 +1,174 @@
+.sr-only {
+  position: absolute;
+  z-index: -9999;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font: 400 14px "Rubik", "Tahoma", sans-serif;
+  color: #444;
+  background-color: #f9f9f9;
+}
+
+.clear {
+  clear: both;
+}
+
+#big_weather_block.weather-banner {
+  margin-bottom: 20px;
+  width: 255px;
+  padding: 16px;
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  font: 500 16px/19px "Rubik", "Tahoma", sans-serif;
+  color: #444;
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  transition: box-shadow 0.3s;
+}
+
+#big_weather_block.weather-banner:hover {
+  border: 1px solid #dcdcdc;
+  box-shadow: 2px 3px 6px #ccc;
+}
+
+.weather-banner__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font: 500 21px/25px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather-banner__title a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.weather-banner__title a:hover {
+  text-decoration: underline;
+}
+
+.weather-banner__title a:active {
+  opacity: 0.8;
+}
+
+.weather-banner__date {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  margin-bottom: 16px;
+  font: 400 18px/21px "Rubik", "Tahoma", sans-serif;
+  color: #333;
+}
+
+.weather-banner__date-value {
+  margin-left: 8px;
+  color: #bbb;
+}
+
+.weather-banner__temperature-header {
+  display: flex;
+  margin-bottom: 16px;
+  font: 400 64px/76px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather-banner__temperature-icon {
+  display: flex;
+  flex-flow: wrap;
+  width: 70px;
+  height: 70px;
+  margin-right: 16px;
+  margin-top: 4px;
+  font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+}
+
+.weather-banner__temperature-description {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 16px;
+  font: 500 16px/19px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather-banner__temperature-time-values {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 4px;
+  font: 400 16px/19px "Rubik", "Tahoma", sans-serif;
+}
+
+.weather-banner__temperature-time-value:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.weather-banner__stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -8px;
+  margin-bottom: -8px;
+}
+
+.weather-banner__stat {
+  padding: 8px 6px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  width: calc(50% - 8px);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+}
+
+.weather-banner__stat-title {
+  margin-bottom: 4px;
+  font: 400 14px/17px "Rubik", "Tahoma", sans-serif;
+  color: #ccc;
+}
+
+.weather-banner__stat-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  font: 400 13px/normal "Rubik", "Tahoma", sans-serif;
+}
+
+.weather-banner__stat-value {
+  font: 400 22px/26px "Rubik", "Tahoma", sans-serif;
+  color: #666;
+}
+
+.weather-banner__stat-text {
+  font: 400 14px/17px "Rubik", "Tahoma", sans-serif;
+  color: #666;
+}

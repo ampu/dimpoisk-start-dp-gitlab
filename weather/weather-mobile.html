@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Погода в Махачкале (телефон)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.min.css">
+    <link rel="stylesheet" href="./weather-mobile.css">
+  </head>
+  <body>
+    <article class="weather-mobile weather-mobile-animation" id="weather">
+      <header class="weather-mobile__header">
+        <h1 class="weather-mobile__title">Погода в Махачкале</h1>
+      </header>
+      <div class="weather-mobile__container">
+        <div class="weather-mobile__summary">
+          <div class="weather-mobile__date"><span class="weather-mobile__date-short">Сегодня</span><span class="weather-mobile__date-value">Вт 12 июля</span></div>
+          <div class="weather-mobile__temperature">
+            <div class="weather-mobile__temperature-header"><img class="weather-mobile__temperature-icon" src="./images/weather/icons/snowy.svg" width="50" height="50" alt="">25&deg;</div>
+            <div class="weather-mobile__temperature-description">преимущественно солнечно
+              <div class="weather-mobile__temperature-time-values"><span class="weather-mobile__temperature-time-value">днём: 25&deg;</span><span class="weather-mobile__temperature-time-value">ночью: 22&deg;</span></div>
+            </div>
+          </div>
+          <ul class="weather-mobile__stats">
+            <li class="weather-mobile__stat"><span class="weather-mobile__stat-title">Ветер</span><img class="weather-mobile__stat-icon" src="https://dimpoisk.ru/images/icons/wind.svg" width="24" height="24" alt=""><span class="weather-mobile__stat-value">5 м/с</span><span class="weather-mobile__stat-text">ю-з</span></li>
+            <li class="weather-mobile__stat"><span class="weather-mobile__stat-title">Влажность</span><img class="weather-mobile__stat-icon" src="https://dimpoisk.ru/images/icons/vlazh.svg" width="24" height="24" alt=""><span class="weather-mobile__stat-value">86%</span><span class="weather-mobile__stat-text">высокая</span></li>
+            <li class="weather-mobile__stat"><span class="weather-mobile__stat-title">Солнце</span><img class="weather-mobile__stat-icon" src="https://dimpoisk.ru/images/icons/sunset.svg" width="24" height="24" alt=""><span class="weather-mobile__stat-value">19:27</span><span class="weather-mobile__stat-text">Восход: 04:24</span></li>
+            <li class="weather-mobile__stat"><span class="weather-mobile__stat-title">Давление</span><img class="weather-mobile__stat-icon" src="https://dimpoisk.ru/images/icons/atm_dav.svg" width="24" height="24" alt=""><span class="weather-mobile__stat-value">1030</span><span class="weather-mobile__stat-text">мм. рт. ст.</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="weather-mobile__days">
+        <div class="weather-mobile__container">
+          <div class="weather-mobile__days-slider">
+            <div class="weather-mobile__days-inner swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="weather-mobile__day">
+                  <div class="weather-mobile__day-date">Завтра<span class="weather-mobile__day-date-value">12 июля</span></div>
+                  <div class="weather-mobile__day-temperature">
+                    <div class="weather-mobile__day-temperature-header"><img class="weather-mobile__day-temperature-icon" src="./images/weather/icons/snowy.svg" width="60" height="60" alt=""></div>
+                    <div class="weather-mobile__day-temperature-description">
+                      <div class="weather-mobile__day-temperature-time-values"><span class="weather-mobile__day-temperature-time-value">+25&deg;</span><span class="weather-mobile__day-temperature-time-value">+ 22&deg;</span></div>
+                      <div class="weather-mobile__day-temperature-text" title="облачно с прояснениями">облачно с прояснен...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="weather-mobile__day">
+                  <div class="weather-mobile__day-date">Вт<span class="weather-mobile__day-date-value">13 июля</span></div>
+                  <div class="weather-mobile__day-temperature">
+                    <div class="weather-mobile__day-temperature-header"><img class="weather-mobile__day-temperature-icon" src="./images/weather/icons/cloudy-with-sun.svg" width="60" height="60" alt=""></div>
+                    <div class="weather-mobile__day-temperature-description">
+                      <div class="weather-mobile__day-temperature-time-values"><span class="weather-mobile__day-temperature-time-value">+31&deg;</span><span class="weather-mobile__day-temperature-time-value">+ 27&deg;</span></div>
+                      <div class="weather-mobile__day-temperature-text" title="малооблачно">малообла&shy;чно</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="weather-mobile__day">
+                  <div class="weather-mobile__day-date">Ср<span class="weather-mobile__day-date-value">14 июля</span></div>
+                  <div class="weather-mobile__day-temperature">
+                    <div class="weather-mobile__day-temperature-header"><img class="weather-mobile__day-temperature-icon" src="./images/weather/icons/cloudy.svg" width="60" height="60" alt=""></div>
+                    <div class="weather-mobile__day-temperature-description">
+                      <div class="weather-mobile__day-temperature-time-values"><span class="weather-mobile__day-temperature-time-value">+22&deg;</span><span class="weather-mobile__day-temperature-time-value">+ 22&deg;</span></div>
+                      <div class="weather-mobile__day-temperature-text" title="небольшая облачность">небольшая облачно...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="weather-mobile__day">
+                  <div class="weather-mobile__day-date">Чт<span class="weather-mobile__day-date-value">15 июля</span></div>
+                  <div class="weather-mobile__day-temperature">
+                    <div class="weather-mobile__day-temperature-header"><img class="weather-mobile__day-temperature-icon" src="./images/weather/icons/cloudy-with-sun.svg" width="60" height="60" alt=""></div>
+                    <div class="weather-mobile__day-temperature-description">
+                      <div class="weather-mobile__day-temperature-time-values"><span class="weather-mobile__day-temperature-time-value">+35&deg;</span><span class="weather-mobile__day-temperature-time-value">+ 32&deg;</span></div>
+                      <div class="weather-mobile__day-temperature-text" title="ясно">ясно</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="weather-mobile__day">
+                  <div class="weather-mobile__day-date">Пт<span class="weather-mobile__day-date-value">16 июля</span></div>
+                  <div class="weather-mobile__day-temperature">
+                    <div class="weather-mobile__day-temperature-header"><img class="weather-mobile__day-temperature-icon" src="./images/weather/icons/snowy-with-clouds.svg" width="60" height="60" alt=""></div>
+                    <div class="weather-mobile__day-temperature-description">
+                      <div class="weather-mobile__day-temperature-time-values"><span class="weather-mobile__day-temperature-time-value">+25&deg;</span><span class="weather-mobile__day-temperature-time-value">+ 22&deg;</span></div>
+                      <div class="weather-mobile__day-temperature-text" title="небольшая облачность">небольшая облачно...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="weather-mobile__day">
+                  <div class="weather-mobile__day-date">Сб<span class="weather-mobile__day-date-value">17 июля</span></div>
+                  <div class="weather-mobile__day-temperature">
+                    <div class="weather-mobile__day-temperature-header"><img class="weather-mobile__day-temperature-icon" src="./images/weather/icons/snowy-with-clouds.svg" width="60" height="60" alt=""></div>
+                    <div class="weather-mobile__day-temperature-description">
+                      <div class="weather-mobile__day-temperature-time-values"><span class="weather-mobile__day-temperature-time-value">+25&deg;</span><span class="weather-mobile__day-temperature-time-value">+ 22&deg;</span></div>
+                      <div class="weather-mobile__day-temperature-text" title="небольшая облачность">небольшая облачно...</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <script src="./swiper-bundle.min.js"></script>
+    <script> {
+      const DAYS_SLIDER_WIDTH = 343;
+      const DAYS_SLIDE_WIDTH = 110;
+
+      new Swiper(`.weather-mobile__days-slider`, {
+        width: DAYS_SLIDER_WIDTH,
+        slidesPerView: DAYS_SLIDER_WIDTH / DAYS_SLIDE_WIDTH,
+        spaceBetween: 0,
+      });
+    } </script>
+  </body>
+</html>
