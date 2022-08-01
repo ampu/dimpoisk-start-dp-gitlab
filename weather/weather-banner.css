@@ -52,9 +52,11 @@ body {
   transition: box-shadow 0.3s;
 }
 
-#big_weather_block.weather-banner:hover {
-  border: 1px solid transparent;
-  box-shadow: 2px 3px 6px #f1f1f1;
+@media (prefers-color-scheme: light) {
+  #big_weather_block.weather-banner:hover {
+    border: 1px solid transparent;
+    box-shadow: 2px 3px 6px #f1f1f1;
+  }
 }
 
 .weather-banner__title {

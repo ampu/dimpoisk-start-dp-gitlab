@@ -92,10 +92,12 @@ body {
   transition: box-shadow 0.5s, transform 0.5s;
 }
 
-.weather-mobile-animation .weather-mobile__summary:hover {
-  z-index: 1;
-  box-shadow: 2px 3px 6px #f1f1f1;
-  transform: scale(1.01);
+@media (prefers-color-scheme: light) {
+  .weather-mobile-animation .weather-mobile__summary:hover {
+    z-index: 1;
+    transform: scale(1.01);
+    box-shadow: 2px 3px 6px #f1f1f1;
+  }
 }
 
 .weather-mobile__date {
@@ -244,10 +246,12 @@ body {
   transition: box-shadow 0.5s, transform 0.5s;
 }
 
-.weather-mobile-animation .weather-mobile__day:hover {
-  z-index: 1;
-  box-shadow: 2px 3px 6px #f1f1f1;
-  transform: scale(1.01);
+@media (prefers-color-scheme: light) {
+  .weather-mobile-animation .weather-mobile__day:hover {
+    z-index: 1;
+    box-shadow: 2px 3px 6px #f1f1f1;
+    transform: scale(1.01);
+  }
 }
 
 .weather-mobile__day-date {
